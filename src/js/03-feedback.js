@@ -27,7 +27,7 @@ function onSubmitForm(event) {
 function loadForm() {
   const loadData = JSON.parse(localStorage.getItem(STORAGE_KEY));
   if (loadData) {
-    emailEl.value = loadData.email;
-    messageEl.value = loadData.message;
+    emailEl.value = loadData.email || '';
+    messageEl.value = loadData.message || '';
   }
 }
